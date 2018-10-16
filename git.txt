@@ -1,0 +1,70 @@
+GitHub and git
+When you're going through the course, you'll need to let instructors and mentors see your code so that they can provide feedback and guidance. In order to do this, you'll need to setup a GitHub account and install git on your computer.
+
+GitHub
+GitHub is a public place on the internet where developers publish their code. You need to go create an account at https://github.com/join.
+
+Once you have created your account, come back and we'll install git.
+
+git
+The difference between GitHub and git can be confusing at first, but it is quite simple.
+
+git is a tool that allows developers to manage their code. When you use git, you create a history of all the changes you make to your code which is really powerful especially when you work on a project with others or you need to go back and see what your code previously looked like.
+
+GitHub is simply one of many websites where you can publish git repositories. There are many others like GitLabs and BitBucket, but for this course, we're going to use GitHub.
+
+Now, let's install git from https://git-scm.com/downloads. Note: be sure to choose the correct version for your comptuer.
+
+Check the git install
+Once you've installed git, you can use it from the command-line. If you don't know what the command-line is, this part is going to take a minute to get used to, and you might want to watch the optional videos on the command-line.
+
+To use git, you need to open cmd (Windows) or terminal (Mac). Once you're in, you can type git and press enter. You should see a message explaining the usage of git at this point, but you shouldn't see a message that git does not exist as a command. If you do, you may need to try and install git again or reach out to an instructor for help.
+
+Using git
+The primary way that you'll be using git in this course is on new projects that you create from scratch which is what we'll cover for now.
+
+From the command-line, you need to navigate to a folder that you want to use for your project. This folder should be empty! Do not use your Desktop or the root of your Documents folder. You should have created a Sourse folder in Documents and a MyFirstProject folder in Source from the VS Code setup. Let's use this folder.
+
+Once you're in the folder, type:
+
+> git init
+This will initialize git in this folder which will enable git to start tracking changes that you make.
+
+Go ahead and create a file in this folder from VS Code named readme.md and copy the following into the file:
+
+# My First GitHub Project!
+Save the file, and go back to the command-line. Once you're back, type:
+
+> git status
+You should see the file that you just created, and now it needs to be committed to the git repository. Let's do it! Type the following two commands:
+
+> git add .
+> git commit -m "added a readme file to the initial project"
+The first command will tell git that we want to add all the files in our directory to our git repository. The second command will commit the files to our repository. The text after -m inside the quotes is your commit message. This is where you should provide some notes as to what you are commmitting.
+
+Ok, so this is the gist of git for now. You'll continue to git add . and git commit -m "your note" as you make changes. You should commit in pretty small chunks. Don't wait until you have a tone of code written before you commit. Smaller chunks allow you to see more of your changes in the history which can help when you run into issues.
+
+Pushing to GitHub
+Now that we have our repository, we need to push to GitHub. First, let's go to GitHub and create a new repository.
+
+Once you login to GitHub, you'll see a green button that says New Repository. Click the button and provide a name for your repository like My First Project. Don't worry about any of the other options here. Just click the green button that says Create repository.
+
+Once the repository is created, you'll be given some instructions, and you need to find the url that looks like https://github.com/your-username/my-first-project.git. Copy the url because you're going to need it on the command line in order to push.
+
+Back on the command-line, type the following commands, but be sure to use your url not the example below:
+
+> git remote add origin https://github.com/your-username/my-first-project.git
+> git push --set-upstream origin master
+This will create a link between your local git repository and the remote repository on GitHub. Once you run these commands once for a repository, you won't have to do it again. You'll be able to just use git push after you commit.
+
+Finally!
+Ok, so that was quite a bit to get through, but once you're to this point, it is quite easy.
+
+When you reach a point while coding that you want to commit, all you have to do is run the following commands:
+
+> git add .
+> git commit -m "your commit message here"
+> git push
+Yay! You did it!
+
+Let's keep in mind that this is the bare minimium that you need to know about git and GitHub at this point. Later on in the course, you'll be using git in more advanced scenarios like branching and merging, but this is NOT the time to worry about that. All that you need to be able to do is push code to GitHub so that we can help you when you're having trouble.
